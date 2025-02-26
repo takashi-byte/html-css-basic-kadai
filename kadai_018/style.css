@@ -1,0 +1,70 @@
+#top {
+    width: 800px;
+    background-color: #dcc9f4;
+    margin: 20px auto; /* 上下20pxの余白を入れ、中央配置 */
+    text-align: center; /* 中のp要素を中央揃えに */
+  }
+  
+  .top-child {
+    width: 20%; /* 親要素の20%の幅 */
+    background-color: #ffd9df;
+    display: inline-block; /* 横並びにするため */
+    margin: 0 10px; /* 横並びに余白を追加 */
+    box-sizing: border-box; /* パディングやボーダーが幅に影響しないように */
+  }
+  #middle {
+    width: 800px;
+    height: 800px;
+    background-color: #ffd9df;
+    position: relative; /* 親要素に相対位置を指定 */
+    margin: 20px auto; /* 上下20pxの余白を入れ、中央配置 */
+    box-sizing: border-box; /* パディングやボーダーがサイズに影響しないように */
+  }
+  
+  #middle-child01, #middle-child02, #middle-child03 {
+    width: 200px;
+    height: 200px;
+    background-color: #87ceeb;
+    position: absolute; /* 絶対位置で配置 */
+    display: inline-block; /* 横並びにする */
+    margin: 10px; /* 子要素間に少し余白を追加 */
+    box-sizing: border-box; /* パディングやボーダーがサイズに影響しないように */
+  }
+  #middle-child01 {
+    top: 100px;  /* 上から100px */
+    left: 100px; /* 左から100px */
+  }
+  
+  #middle-child02 {
+    top: 300px;  /* 上から300px */
+    left: 300px; /* 左から300px */
+  }
+  
+  #middle-child03 {
+    top: 500px;  /* 上から500px */
+    left: 500px; /* 左から500px */
+  }
+  #bottom {
+    width: 800px;
+    height: 300px;
+    background-color: #87ceeb;
+    position: relative; /* 親要素に相対位置を指定 */
+    margin: 0 auto; /* 上下の余白を自動で設定し、中央に配置 */
+  }
+  
+  #bottom-child01, #bottom-child02, #bottom-child03{
+    width: 400px;
+    height: 100px;
+    background-color: #e5dcf0;
+    position: absolute; /* 絶対位置で配置 */
+    top: 0; /* 上端に配置 */
+  }
+  #bottom-child02 {
+    top: 100px;
+    left: 200px; /* 左から200pxずらして配置 */
+  }
+  
+  #bottom-child03 {
+    top: 200px;
+    left: 400px; /* 左から400pxずらして配置 */
+  }
