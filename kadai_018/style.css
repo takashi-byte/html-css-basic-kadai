@@ -9,15 +9,13 @@
     width: 20%; /* 親要素の20%の幅 */
     background-color: #ffd9df;
     display: inline-block; /* 横並びにするため */
-    margin: 0 10px; /* 横並びに余白を追加 */
-    box-sizing: border-box; /* パディングやボーダーが幅に影響しないように */
   }
   #middle {
     width: 800px;
     height: 800px;
     background-color: #ffd9df;
+    margin: 20px auto;
     position: relative; /* 親要素に相対位置を指定 */
-    margin: 20px auto; /* 上下20pxの余白を入れ、中央配置 */
     box-sizing: border-box; /* パディングやボーダーがサイズに影響しないように */
   }
   
@@ -56,15 +54,15 @@
     width: 400px;
     height: 100px;
     background-color: #e5dcf0;
-    position: absolute; /* 絶対位置で配置 */
+    position: relative; /* 絶対位置で配置 */
     top: 0; /* 上端に配置 */
   }
   #bottom-child02 {
-    top: 100px;
+    position: relative;
     left: 200px; /* 左から200pxずらして配置 */
   }
   
   #bottom-child03 {
-    top: 200px;
+    position: relative;
     left: 400px; /* 左から400pxずらして配置 */
   }
