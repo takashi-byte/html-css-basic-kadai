@@ -1,0 +1,100 @@
+h1, p, body {
+    margin: 0;
+}
+article p, article a {
+    font-size: 20px;
+}
+header {
+    margin-bottom: 20px; /* 下の余白を20px */
+    background-color: rgb(244, 79, 79); /* 背景色をrgb(244, 79, 79)に設定 */
+    text-align: center; /* 中の要素を中央揃えにする */
+}
+h1 {
+    color: rgb(255, 255, 255); /* 文字色を白色に設定 */
+}
+main {
+    padding: 10px; /* 上下左右ともに10pxの余白を設定 */
+}
+#parent {
+    display: flex; /* Flexコンテナに設定 */
+    justify-content: space-between; /* アイテムを均等に配置し、最初と最後のアイテムにも間隔を設ける */
+}
+.contents {
+    border: 3px solid rgb(238, 204, 204); /* 太さ3px、実線、色rgb(238, 204, 204)で囲む */
+    flex-basis: 25%; /* 幅を親要素の25%に設定 */
+    padding: 10px 15px; /* 要素内の余白を上下10px、左右15pxに設定 */
+    margin: 20px 0; /* 要素外の余白を上下20px、左右0に設定 */
+    display: flex; /* Flexboxを使って中央揃えにするため */
+    justify-content: center; /* 横方向で中央揃え */
+    align-items: center; /* 縦方向で中央揃え */
+}
+h2 {
+    font-size: 25px; /* フォントサイズを25pxに設定 */
+    text-decoration: underline; /* 下線を引く */
+    text-decoration-thickness: 3px; /* 下線の太さを3pxに設定 */
+    text-decoration-style: dotted; /* 下線を点線に設定 */
+    text-decoration-color: rgb(236, 122, 122); /* 下線の色をrgb(236, 122, 122)に設定 */
+    position: relative; /* 「●」記号を前に配置するため */
+  }
+  .contents {
+    position: relative; /* 各コンテナを相対配置に設定 */
+    width: 100%; /* 必要に応じて幅を設定 */
+  }
+  
+  .contents h2,.contents p {
+    position: absolute; /* h2とp要素を絶対配置 */
+    top: 10px; /* 上部に配置 */
+    left: 10px; /* 左端に配置（親要素内での位置） */
+    width: calc(100% - 20px); /* 幅を親要素に合わせる（左右の余白を考慮） */
+  }
+  
+  .contents img {
+    width: 100%; /* 画像の幅を親要素に合わせる */
+    display: block; /* 画像をブロック要素として表示 */
+  }
+  
+  h2::before {
+    content: "●"; /* 「●」記号を表示 */
+    color: rgb(239, 111, 139); /* 記号の色をrgb(239, 111, 139)に設定 */
+    position: absolute; /* 「●」記号を絶対配置 */
+    left: -20px; /* 記号を左側に配置 */
+  }
+  .contents p:nth-of-type(2) ::first-letter {
+    font-weight: bold; /* 太字 */
+    color: rgb(97, 206, 249); /* 文字色をrgb(97, 206, 249)に設定 */
+  }
+  .contents img {
+    margin: 10px 0; /* 上下10px、左右0の余白を設定 */
+    width: 70%; /* 幅を親要素の70%に設定 */
+  }
+  footer {
+    background-color: rgb(244, 79, 79); /* 背景色をrgb(244, 79, 79)に設定 */
+    text-align: center; /* 中身の要素を中央揃えにする */
+  }
+  footer a {
+    color: rgb(255, 255, 255); /* 通常時の文字色をrgb(255, 255, 255)に設定 */
+    text-decoration: none; /* リンクの下線を削除（任意） */
+  }
+  
+  footer a:visited {
+    color: rgb(193, 234, 251); /* 訪問済みリンクの文字色をrgb(193, 234, 251)に設定 */
+  }
+  
+  footer a:hover {
+    color: rgb(245, 178, 168); /* マウスカーソルが乗ると文字色がrgb(245, 178, 168)に変化 */
+  }
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 30px; /* h2のフォントサイズを30pxに設定 */
+    }
+  
+    p {
+      font-size: 25px; /* pのフォントサイズを25pxに設定 */
+    }
+  
+    #parent {
+      display: flex; /* Flexboxコンテナに設定 */
+      flex-direction: column; /* 要素を縦に並べる */
+    }
+  }
+    
